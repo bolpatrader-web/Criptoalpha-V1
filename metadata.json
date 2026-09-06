@@ -1,0 +1,8 @@
+{
+  "name": "CriptoAlpha V6 - Plataforma de inversión y análisis de criptomonedas",
+  "description": "Plataforma profesional de inversión y análisis cuantitativo de acciones con cotizaciones de Wall Street en tiempo real, modelos estocásticos de predicción, simulaciones Monte Carlo y optimización de carteras.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,9 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Permite lectura y escritura de estado y logs para sincronización
+    match /{document=**} {
+      allow read, write: if true;
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "entities": {
+    "DaemonState": {
+      "title": "DaemonState",
+      "description": "Configuración y estado del motor 24/7 en servidor",
+      "type": "object",
+      "properties": {
+        "enabled": { "type": "boolean" },
+        "intervalSeconds": { "type": "number" },
+        "tradeSizeUsd": { "type": "number" },
+        "maxOpenPositions": { "type": "number" },
+        "takeProfitPct": { "type": "number" },
+        "stopLossPct": { "type": "number" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "DaemonLog": {
+      "title": "DaemonLog",
+      "description": "Registro de telemetría y operaciones del motor en la nube",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "timestamp": { "type": "string" },
+        "level": { "type": "string" },
+        "message": { "type": "string" }
+      }
+    },
+    "AppSharedSync": {
+      "title": "AppSharedSync",
+      "description": "Sincronización en tiempo real multi-dispositivo de la app, bots y carteras",
+      "type": "object",
+      "properties": {
+        "channel": { "type": "string" },
+        "data": { "type": "object" },
+        "updatedAt": { "type": "number" },
+        "updatedBy": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "daemon_state": {
+      "schema": "DaemonState",
+      "description": "Estado general del daemon 24/7"
+    },
+    "daemon_logs": {
+      "schema": "DaemonLog",
+      "description": "Historial de logs de ejecución 24/7"
+    },
+    "app_shared_sync": {
+      "schema": "AppSharedSync",
+      "description": "Canales de sincronización multi-dispositivo en tiempo real"
+    }
+  }
+}
